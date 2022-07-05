@@ -1,12 +1,20 @@
 package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +22,7 @@ public class Teacher {
     private String teacherName;
     @JsonIgnore
     @OneToMany(mappedBy = "assignedTeacher",cascade = CascadeType.ALL)
-    private List<Course> assignedCourses;
+    private Set<Course> assignedCourses = new HashSet<>();
 
     @Override
     public boolean equals(Object o) {
