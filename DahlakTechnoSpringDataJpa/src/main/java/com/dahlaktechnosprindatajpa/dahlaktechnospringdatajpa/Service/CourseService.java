@@ -6,6 +6,7 @@ public interface CourseService {
     public Course saveCourse(Course course);
     public Course getCourseById(Integer courseId);
     public Course deleteCourseById(Integer courseId);
+    public Course enrolledStudent(Integer courseId, Integer studentId) throws Exception;
 
 
 }

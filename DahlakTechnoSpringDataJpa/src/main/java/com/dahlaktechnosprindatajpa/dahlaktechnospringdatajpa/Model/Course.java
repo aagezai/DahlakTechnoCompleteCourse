@@ -3,9 +3,8 @@ package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+
 @Entity
 @Setter
 @Getter
@@ -23,10 +22,14 @@ public class Course {
             joinColumns = @JoinColumn(name = "courseId"),
             inverseJoinColumns = @JoinColumn(name ="studentId")
     )
-    private Set<Student> enrolledStudents = new HashSet<>();
+    private List<Student> enrolledStudents = new ArrayList<>();
     @ManyToOne
     @JoinColumn(name = "teacher_id",referencedColumnName = "teacherId")
     private Teacher assignedTeacher;
+
+    public boolean enrollStudent(Student student){
+        return enrolledStudents.add(student);
+    }
 
 
     @Override

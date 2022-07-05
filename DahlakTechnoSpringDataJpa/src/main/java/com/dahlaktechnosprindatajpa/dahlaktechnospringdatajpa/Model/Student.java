@@ -19,8 +19,9 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer studentId;
     private String studentName;
-    @JsonIgnore
-    @OneToOne(mappedBy = "studentWithPassport",cascade = CascadeType.ALL)
+
+    @OneToOne
+    @JoinColumn(name = "passport_Id",referencedColumnName = "passportId")
     private Passport studentPassport;
     @JsonIgnore
     @ManyToMany(mappedBy = "enrolledStudents", cascade = CascadeType.ALL)

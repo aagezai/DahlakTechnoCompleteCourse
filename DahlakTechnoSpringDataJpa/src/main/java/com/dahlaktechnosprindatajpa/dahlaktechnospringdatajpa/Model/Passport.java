@@ -1,5 +1,6 @@
 package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,8 +17,8 @@ public class Passport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer passportId;
     private String  passportName;
-    @OneToOne
-    @JoinColumn(name = "student_Id",referencedColumnName = "studentId")
+    @JsonIgnore
+    @OneToOne(mappedBy = "studentPassport")
     private Student studentWithPassport;
 
     @Override

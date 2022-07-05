@@ -35,12 +35,5 @@ public class PassportController {
         return passportServiceImpl.getPassportById(passportId);
     }
 
-    @PutMapping("/passport/{passportId}/student/{studentId}")
-    public Passport passportsOfAStudent(@PathVariable Integer passportId, @PathVariable Integer studentId){
-        Student student = studentServiceImpl.getStudentById(studentId);
-        Passport passport = passportServiceImpl.getPassportById(passportId);
-        passport.setStudentWithPassport(student);
-        passportServiceImpl.savePassport(passport);
-        return passport;
-    }
+
 }

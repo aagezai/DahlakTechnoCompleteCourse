@@ -6,4 +6,5 @@ public interface StudentService {
     public Student saveStudent(Student student);
     public Student deleteStudentById(Integer studentId);
     public Student getStudentById(Integer studentId);
+    public Student setPassportToStudent(Student student);
 }

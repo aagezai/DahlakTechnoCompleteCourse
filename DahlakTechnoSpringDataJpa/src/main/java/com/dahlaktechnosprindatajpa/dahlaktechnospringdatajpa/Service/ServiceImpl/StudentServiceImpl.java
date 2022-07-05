@@ -22,11 +22,15 @@ public class StudentServiceImpl implements StudentService {
     public Student getStudentById(Integer studentId) {
         return studentRepository.findById(studentId).get();
     }
-
     @Override
     public Student deleteStudentById(Integer studentId) {
         Student student = getStudentById(studentId);
          studentRepository.deleteById(studentId);
          return student;
     }
+    @Override
+    public Student setPassportToStudent(Student student) {
+        return studentRepository.save(student);
+    }
+
 }
