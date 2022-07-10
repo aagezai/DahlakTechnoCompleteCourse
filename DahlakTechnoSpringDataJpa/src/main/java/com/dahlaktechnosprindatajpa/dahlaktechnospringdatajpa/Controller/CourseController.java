@@ -33,5 +33,11 @@ public class CourseController {
 
         return courseServiceImpl.enrolledStudent(courseId,studentId);
     }
+    @PutMapping("/course/{courseId}/teacher/{teacherId}")
+    public Course assignCourseToTeacher(@PathVariable Integer courseId, @PathVariable Integer teacherId) throws Exception {
+
+        return courseServiceImpl.assignCourseToTeacher(courseId,teacherId);
+    }
+
 
 }

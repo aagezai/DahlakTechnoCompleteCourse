@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Setter
 @Getter
+@Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,32 +16,21 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer courseId;
     private String courseName;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name= "Course_Student",
             joinColumns = @JoinColumn(name = "courseId"),
             inverseJoinColumns = @JoinColumn(name ="studentId")
     )
-    private List<Student> enrolledStudents = new ArrayList<>();
-    @ManyToOne
+    private Set<Student> students = new HashSet<>();
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "teacher_id",referencedColumnName = "teacherId")
-    private Teacher assignedTeacher;
+    private Teacher teacher;
 
     public boolean enrollStudent(Student student){
-        return enrolledStudents.add(student);
+        return students.add(student);
     }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Course)) return false;
-        Course course = (Course) o;
-        return getCourseId().equals(course.getCourseId()) && getCourseName().equals(course.getCourseName()) && getEnrolledStudents().equals(course.getEnrolledStudents()) && getAssignedTeacher().equals(course.getAssignedTeacher());
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getCourseId(), getCourseName(), getEnrolledStudents(), getAssignedTeacher());
-    }
 }

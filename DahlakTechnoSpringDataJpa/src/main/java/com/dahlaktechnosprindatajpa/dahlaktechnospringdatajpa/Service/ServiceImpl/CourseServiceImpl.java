@@ -2,6 +2,7 @@ package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.ServiceIm
 
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Course;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Student;
+import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Teacher;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Repository.CourseRepository;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ public class CourseServiceImpl implements CourseService {
     private CourseRepository courseRepository;
     @Autowired
     private StudentServiceImpl studentServiceImpl;
+    @Autowired
+    private TeacherServiceImpl teacherServiceImpl;
 
     @Autowired
     public CourseServiceImpl(CourseRepository courseRepository) {
@@ -45,6 +48,14 @@ public class CourseServiceImpl implements CourseService {
         if(!isEnrolled)
             throw new Exception("Student already Enrolled");
         return persistedCourse;
+    }
+
+    @Override
+    public Course assignCourseToTeacher(Integer courseId, Integer teacherId) {
+        Course course = getCourseById(courseId);
+        Teacher teacher = teacherServiceImpl.getTeacherById(teacherId);
+        course.setTeacher(teacher);
+       return courseRepository.save(course);
     }
 
 }

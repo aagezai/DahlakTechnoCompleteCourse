@@ -25,8 +25,11 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public Teacher deleteTeacherById(Integer teacherId) {
-        return null;
+        Teacher teacher = getTeacherById(teacherId);
+        teacherRepository.deleteById(teacherId);
+        return teacher ;
     }
+
 
 
 }

@@ -2,38 +2,27 @@ package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Getter
 @Setter
 @ToString
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer teacherId;
     private String teacherName;
     @JsonIgnore
-    @OneToMany(mappedBy = "assignedTeacher",cascade = CascadeType.ALL)
-    private Set<Course> assignedCourses = new HashSet<>();
+    @OneToMany(mappedBy = "students")
+    @OnDelete(action = OnDeleteAction.NO_ACTION)
+    private Set<Course> courses = new HashSet<>();
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Teacher)) return false;
-        Teacher teacher = (Teacher) o;
-        return teacherId.equals(teacher.teacherId) && teacherName.equals(teacher.teacherName) && assignedCourses.equals(teacher.assignedCourses);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(teacherId, teacherName, assignedCourses);
-    }
 }
