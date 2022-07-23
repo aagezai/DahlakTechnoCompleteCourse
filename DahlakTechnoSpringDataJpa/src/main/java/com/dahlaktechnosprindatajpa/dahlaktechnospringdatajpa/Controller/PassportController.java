@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.PostUpdate;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/passports")
@@ -33,6 +34,10 @@ public class PassportController {
     @GetMapping("/passport/{passportId}")
     public Passport getPassportById(@PathVariable Integer passportId){
         return passportServiceImpl.getPassportById(passportId);
+    }
+    @GetMapping("/passport")
+    public List<Passport> getAllPassport(){
+        return passportServiceImpl.getAllPassports();
     }
 
 

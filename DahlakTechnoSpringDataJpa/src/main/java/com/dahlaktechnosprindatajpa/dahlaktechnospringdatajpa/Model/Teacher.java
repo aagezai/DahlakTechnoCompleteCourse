@@ -17,10 +17,7 @@ import java.util.*;
 
 public class Teacher {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer teacherId;
-
     private String teacherName;
     @JsonIgnore
     @OneToMany(mappedBy = "students")

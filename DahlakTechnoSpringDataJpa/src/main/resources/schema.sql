@@ -1,3 +1,8 @@
+Drop TABLE IF EXISTS course_student cascade ;
+Drop TABLE IF EXISTS student  CASCADE ;
+DROP TABLE IF EXISTS course  CASCADE ;
+Drop TABLE IF EXISTS passport CASCADE ;
+DROP TABLE IF EXISTS teacher CASCADE ;
 CREATE TABLE teacher (
                            teacher_id INTEGER NOT NULL AUTO_INCREMENT,
                            teacher_name varchar(255) DEFAULT NULL,

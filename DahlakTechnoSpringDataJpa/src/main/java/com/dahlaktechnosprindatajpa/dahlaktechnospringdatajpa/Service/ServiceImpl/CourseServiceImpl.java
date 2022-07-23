@@ -1,17 +1,23 @@
 package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.ServiceImpl;
 
+import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Exception.ResourceNotFoundException;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Course;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Student;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Teacher;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Repository.CourseRepository;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.CourseService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CourseServiceImpl implements CourseService {
 
     private CourseRepository courseRepository;
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private StudentServiceImpl studentServiceImpl;
     @Autowired
@@ -29,12 +35,20 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public Course getCourseById(Integer courseId) {
-        return courseRepository.findById(courseId).get();
+        logger.info("inside of getById ++");
+        return courseRepository.findById(courseId).
+                orElseThrow(() -> new ResourceNotFoundException("course","courseId",courseId));
+    }
+
+    @Override
+    public List<Course> getAllCourses() {
+        return courseRepository.findAll();
     }
 
     @Override
     public Course deleteCourseById(Integer courseId) {
-        Course course = courseRepository.findById(courseId).get();
+        logger.info("inside of deleteById ++");
+        Course course = getCourseById(courseId);
         courseRepository.deleteById(courseId);
         return course;
     }

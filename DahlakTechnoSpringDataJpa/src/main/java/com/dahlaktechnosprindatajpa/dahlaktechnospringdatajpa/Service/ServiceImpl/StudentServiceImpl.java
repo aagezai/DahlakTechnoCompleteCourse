@@ -1,5 +1,6 @@
 package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.ServiceImpl;
 
+import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Exception.ResourceNotFoundException;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Passport;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Student;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Repository.StudentRepository;
@@ -28,7 +29,9 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student getStudentById(Integer studentId) {
-        return studentRepository.findById(studentId).get();
+
+        return studentRepository.findById(studentId).
+                orElseThrow(()->new ResourceNotFoundException("Student","Student Id",studentId));
     }
     @Override
     public Student deleteStudentById(Integer studentId) {

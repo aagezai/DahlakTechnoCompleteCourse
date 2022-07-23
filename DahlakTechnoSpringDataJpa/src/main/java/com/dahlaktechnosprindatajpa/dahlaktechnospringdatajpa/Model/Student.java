@@ -17,10 +17,8 @@ import java.util.*;
 @AllArgsConstructor
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer studentId;
     private String studentName;
-
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "passport_Id",referencedColumnName = "passportId")
     private Passport passport;

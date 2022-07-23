@@ -16,7 +16,6 @@ import java.util.Objects;
 @ToString
 public class Passport {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer passportId;
     private String passportName;
     @JsonIgnore

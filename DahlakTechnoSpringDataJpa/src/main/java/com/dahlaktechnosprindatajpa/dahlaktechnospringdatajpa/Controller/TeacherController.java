@@ -5,6 +5,9 @@ import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.ServiceImp
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.GeneratedValue;
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/teachers/")
 public class TeacherController {
@@ -24,5 +27,9 @@ public class TeacherController {
     @GetMapping("teacher/{teacherId}")
     public Teacher getTeacherById(@PathVariable Integer teacherId){
         return teacherServiceImpl.getTeacherById(teacherId);
+    }
+    @GetMapping("/teacher")
+    public List<Teacher> getAllTeachers(){
+        return teacherServiceImpl.getAllTeacher();
     }
 }
