@@ -1,10 +1,10 @@
 package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
-import org.springframework.web.bind.annotation.DeleteMapping;
 
 import javax.persistence.*;
 import java.util.*;
@@ -12,9 +12,11 @@ import java.util.*;
 @Entity
 @Getter
 @Setter
-@ToString
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Builder
+
 public class Student {
     @Id
     private Integer studentId;
@@ -26,7 +28,6 @@ public class Student {
     @OnDelete(action = OnDeleteAction.NO_ACTION)
     @ManyToMany(mappedBy = "students")
     private Set<Course> courses = new HashSet<>();
-
 
 
 }

@@ -1,16 +1,20 @@
 package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model;
 
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Getter
 @Setter
-@ToString
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
+@Builder
+
 public class Course {
     @Id
     private Integer courseId;
@@ -26,10 +30,9 @@ public class Course {
     @JoinColumn(name = "teacher_id",referencedColumnName = "teacherId")
     private Teacher teacher;
 
-    public boolean enrollStudent(Student student){
+
+    public boolean enrollStudent(Student student) {
+        System.out.println(students+"///////////////");
         return students.add(student);
     }
-
-
-
 }

@@ -4,6 +4,8 @@ import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Passport;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Student;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.ServiceImpl.PassportServiceImpl;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.ServiceImpl.StudentServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,20 +16,20 @@ import java.util.List;
 public class StudentController {
 
     private StudentServiceImpl studentServiceImpl;
-    @Autowired
-    private PassportServiceImpl passportServiceImpl;
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     public StudentController(StudentServiceImpl studentServiceImpl) {
         this.studentServiceImpl = studentServiceImpl;
     }
     @PostMapping("/student")
-    public Student saveStudent(@RequestBody Student student){
-        return studentServiceImpl.saveStudent(student);
+    public void saveStudent(@RequestBody Student student){
+        logger.info("saveStudent called");
+         studentServiceImpl.saveStudent(student);
 
     }
     @DeleteMapping("/student/{studentId}")
-    public Student deleteStudentById(@PathVariable Integer studentId){
-        return studentServiceImpl.deleteStudentById(studentId);
+    public void  deleteStudentById(@PathVariable Integer studentId){
+         studentServiceImpl.deleteStudentById(studentId);
     }
     @GetMapping("/student/{studentId}")
     public Student getStudentById(@PathVariable Integer studentId){
