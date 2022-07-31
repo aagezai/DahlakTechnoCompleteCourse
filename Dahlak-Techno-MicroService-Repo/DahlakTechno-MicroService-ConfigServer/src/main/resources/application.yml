@@ -1,0 +1,12 @@
+server:
+  port: 6296
+
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/aagezai/config-server
+          clone-on-start: true

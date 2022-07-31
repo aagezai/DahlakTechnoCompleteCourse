@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DahlakTechno-MicroService-API-GetWay-0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DahlakTechno-Microservice-Repo/DahlakTechno-MicroService-APIGetWay/target/DahlakTechno-MicroService-API-GetWay-0.0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

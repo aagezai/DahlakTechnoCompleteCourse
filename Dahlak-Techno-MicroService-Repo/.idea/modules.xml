@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Dahlak-Techno-MicroService-Repo.iml" filepath="$PROJECT_DIR$/.idea/Dahlak-Techno-MicroService-Repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DahlakTechno-MicroService-ApiGetWayService/DahlakTechno-MicroService-ApiGetWayService.iml" filepath="$PROJECT_DIR$/DahlakTechno-MicroService-ApiGetWayService/DahlakTechno-MicroService-ApiGetWayService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DahlakTechno-MicroService-ConfigServer/DahlakTechno-MicroService-ConfigServer.iml" filepath="$PROJECT_DIR$/DahlakTechno-MicroService-ConfigServer/DahlakTechno-MicroService-ConfigServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DahlakTechno-MicroService-CourseService/DahlakTechno-MicroService-CourseService.iml" filepath="$PROJECT_DIR$/DahlakTechno-MicroService-CourseService/DahlakTechno-MicroService-CourseService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DahlakTechno-MicroService-EurekaDiscovery/DahlakTechno-MicroService-EurekaDiscovery.iml" filepath="$PROJECT_DIR$/DahlakTechno-MicroService-EurekaDiscovery/DahlakTechno-MicroService-EurekaDiscovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DahlakTechno-MicroService-HystrixService/DahlakTechno-MicroService-HystrixService.iml" filepath="$PROJECT_DIR$/DahlakTechno-MicroService-HystrixService/DahlakTechno-MicroService-HystrixService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DahlakTechno-MicroService-StudentService/DahlakTechno-MicroService-StudentService.iml" filepath="$PROJECT_DIR$/DahlakTechno-MicroService-StudentService/DahlakTechno-MicroService-StudentService.iml" />
+    </modules>
+  </component>
+</project>

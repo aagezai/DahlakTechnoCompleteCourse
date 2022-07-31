@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zipkin-server-2.23.18-exec">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DahlakTechno-Microservice-Repo/zipkin-server-2.23.18-exec.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
