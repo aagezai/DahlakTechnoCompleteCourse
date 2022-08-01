@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="DahlakTechno-MicroService-EurekaDiscover-Service-0.0.1-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/DahlakTechno-Microservice-Repo/DahlakTechno-MicroService-EurekaDiscoverService/target/DahlakTechno-MicroService-EurekaDiscover-Service-0.0.1-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

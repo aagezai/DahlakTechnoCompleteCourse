@@ -1,15 +1,11 @@
 package com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Controller;
-
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Course;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Passport;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Model.Student;
 import com.dahlaktechnosprindatajpa.dahlaktechnospringdatajpa.Service.ServiceImpl.StudentServiceImpl;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
-import com.mysql.cj.xdevapi.JsonArray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +14,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-
 import java.util.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -113,9 +107,7 @@ class StudentControllerTest {
                 .andExpect(jsonPath("$.[1].passport").value((LinkedHashMap)context.read("$.[1].passport")))
                 .andDo(print())
                 .andReturn();
-
         assertEquals(mvcResult.getResponse().getContentAsString(),objectMapper.writeValueAsString(listStudents));
-
 
     }
 
@@ -134,7 +126,6 @@ class StudentControllerTest {
                 .andExpect(jsonPath("$.studentId").value((Integer)context.read("$.studentId")))
                 .andExpect(jsonPath("$.studentName").value((String)context.read("$.studentName")))
                 .andExpect(jsonPath("$.passport").value((LinkedHashMap)context.read("$.passport")))
-
                 .andDo(print())
                 .andReturn();
         assertEquals(mvcResult.getResponse().getContentAsString(),objectMapper.writeValueAsString(student1));

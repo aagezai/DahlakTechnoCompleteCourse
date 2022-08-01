@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="DahlakTechno-MicroService-HystrixService-0.0.1-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/DahlakTechno-Microservice-Repo/DahlakTechno-MicroService-HystrixService/target/DahlakTechno-MicroService-HystrixService-0.0.1-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
