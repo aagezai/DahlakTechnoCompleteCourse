@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: API-GATEWAY
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
   cloud:
     gateway:
       routes:
