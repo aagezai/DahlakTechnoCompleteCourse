@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a877ff55-c2b7-44da-8dd3-a8cc92c3a783" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DaynamicWebPageProject/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/.idea/libraries/Spring_5_2_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/src/Beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/src/com/tutorialspoint/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HellowWorld/src/com/tutorialspoint/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PracticeProject/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PracticeProject/file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PracticeProject/file1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PracticeProject/src/main/java/Exam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PracticeProject/src/main/java/Practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeProject/out/production/PracticeProject/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeProject/out/production/PracticeProject/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeProject/src/main/java/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeProject/src/main/java/Employee.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IeNZMciUVC0IasfR68ADuA6z8h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aagez\intellij-idea-workspace\DahlakTechnoSpringDeepDiving\DahlakTechnoXmlConfig\src" />
+      <recent name="C:\Users\aagez\intellij-idea-workspace\DahlakTechnoSpringDeepDiving\DahlakTechnoXmlConfig" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dahlakTechno.springxml.Main" />
+      <module name="DahlakTechnoXmlConfig" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dahlakTechno.springxml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a877ff55-c2b7-44da-8dd3-a8cc92c3a783" name="Changes" comment="" />
+      <created>1670538166510</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670538166510</updated>
+      <workItem from="1670538186028" duration="3133000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
